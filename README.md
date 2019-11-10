@@ -1,1 +1,1 @@
-# XamarinAppCenterAuth2Aad
+XamarinAppCenterAuth2Aad
