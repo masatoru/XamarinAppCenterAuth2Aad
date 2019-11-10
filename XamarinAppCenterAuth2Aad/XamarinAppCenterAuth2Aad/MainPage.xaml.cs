@@ -14,20 +14,17 @@ namespace XamarinAppCenterAuth2Aad
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        const string _baseUrl = "http://localhost:5000";
+        const string _baseUrl = "{Your Web Api Url}";
         const string _apiUrl = _baseUrl + "/api/hello";
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void BtnCallApi_OnClicked(object sender, EventArgs e)
+        private async void BtnCallApi_OnClicked(object sender, EventArgs e)
         {
-            Task.Run(async () =>
-            {
                 var jsonText = await CallWebApi();
                 await DisplayAlert("API", jsonText, "OK");
-            }).Wait();
         }
 
         private static async Task<string> CallWebApi()
