@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -102,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamarinAppCenterAuth2Aad\XamarinAppCenterAuth2Aad.csproj">
-      <Project>{687C6F7B-928B-485C-9A03-6BE6285E0FBC}</Project>
+      <Project>{4CD69992-B363-4AE2-80BC-592D3648424F}</Project>
       <Name>XamarinAppCenterAuth2Aad</Name>
     </ProjectReference>
   </ItemGroup>

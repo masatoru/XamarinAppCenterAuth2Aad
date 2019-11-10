@@ -19,7 +19,7 @@ namespace XamarinAppCenterAuth2Aad
 
         protected override void OnStart()
         {
-            AppCenter.Start("ios=26171cd7-5583-45dc-8603-7fb4df137389;" +
+            AppCenter.Start("ios={Your iOS App secret here};" +
                             "uwp={Your UWP App secret here};" +
                             "android={Your Android App secret here}",
                 typeof(Analytics), typeof(Crashes),typeof(Auth));
