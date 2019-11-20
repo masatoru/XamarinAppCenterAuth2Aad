@@ -8,18 +8,19 @@ using Microsoft.Extensions.Logging;
 
 namespace XamarinAppCenterAuth2Aad.Backend.Controllers
 {
-    [ApiController]
+    [Authorize]
+//    [ApiController]
     [Route("api/[controller]")]
-    public class HelloController : ControllerBase
+    public class AdminController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<HelloController> _logger;
+        private readonly ILogger<AdminController> _logger;
 
-        public HelloController(ILogger<HelloController> logger)
+        public AdminController(ILogger<AdminController> logger)
         {
             _logger = logger;
         }
@@ -29,12 +30,13 @@ namespace XamarinAppCenterAuth2Aad.Backend.Controllers
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                {
+                    Date = DateTime.Now.AddDays(index),
+                    TemperatureC = rng.Next(-20, 55),
+                    Summary = Summaries[rng.Next(Summaries.Length)]
+                })
+                .ToArray();
         }
     }
+
 }
