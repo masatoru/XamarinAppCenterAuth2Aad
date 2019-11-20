@@ -6,10 +6,11 @@
              mc:Ignorable="d"
              x:Class="XamarinAppCenterAuth2Aad.MainPage">
 
-    <StackLayout>
-        <Button Text="Call WebApi"  Clicked="BtnCallApi_OnClicked"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"/>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Text="Call WebApi"  Clicked="BtnCallApi_OnClicked"/>
+        <Button Text="Call WebApi Auth"  Clicked="BtnCallApiAuth_OnClicked"/>
+        <Button Text="SignIn" Clicked="ClickSignIn"/>
+        <Button Text="SignOut" Clicked="ClickSignOut"/>
     </StackLayout>
 
 </ContentPage>
