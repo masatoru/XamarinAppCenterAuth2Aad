@@ -19,10 +19,15 @@ namespace XamarinAppCenterAuth2Aad
 
         protected override void OnStart()
         {
-            AppCenter.Start("ios={Your iOS App secret here};" +
+            AppCenter.Start("ios={Your AppCenter Key};" +
                             "uwp={Your UWP App secret here};" +
                             "android={Your Android App secret here}",
-                typeof(Analytics), typeof(Crashes),typeof(Auth));
+                typeof(Analytics),
+                typeof(Crashes),
+                typeof(Auth));
+
+            var isEnable = Auth.IsEnabledAsync().Result;
+            Console.WriteLine($"Auth IsEnabled={isEnable}");
 
         }
 

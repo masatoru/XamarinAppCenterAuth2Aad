@@ -26,6 +26,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -138,7 +140,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\XamarinAppCenterAuth2Aad\XamarinAppCenterAuth2Aad.csproj">
-      <Project>{687C6F7B-928B-485C-9A03-6BE6285E0FBC}</Project>
+      <Project>{4CD69992-B363-4AE2-80BC-592D3648424F}</Project>
       <Name>XamarinAppCenterAuth2Aad</Name>
     </ProjectReference>
   </ItemGroup>
